@@ -2,7 +2,7 @@
     <div class="flex justify-between py-5">
         <Drawer>
             <DrawerTrigger class="sm:hidden">
-                <Button variant="outline">
+                <Button variant="ghost">
                     <Icon icon="radix-icons:hamburger-menu"
                         class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
                 </Button>
