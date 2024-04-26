@@ -1,5 +1,12 @@
 <template>
-    <div class="flex justify-between py-5">
+    <div class="flex justify-between py-5 px-4">
+        <div class="hidden sm:flex" />
+        <div class="hidden sm:flex items-center rounded-full border border-gray-400 overflow-clip">
+            <Button variant="ghost">Home</Button>
+            <Button variant="ghost">Projects</Button>
+            <Button variant="ghost">Shorts</Button>
+            <Button variant="ghost">About</Button>
+        </div>
         <Drawer>
             <DrawerTrigger class="sm:hidden">
                 <Button variant="ghost">
@@ -22,13 +29,6 @@
                 </div>
             </DrawerContent>
         </Drawer>
-        <div class="hidden sm:block" />
-        <div class="hidden sm:flex items-center rounded-full border border-gray-400 overflow-clip">
-            <Button variant="ghost">Home</Button>
-            <Button variant="ghost">Projects</Button>
-            <Button variant="ghost">Shorts</Button>
-            <Button variant="ghost">About</Button>
-        </div>
         <DropdownMenu>
             <DropdownMenuTrigger as-child>
                 <Button variant="outline">
