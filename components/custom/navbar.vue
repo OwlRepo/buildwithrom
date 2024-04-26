@@ -1,7 +1,6 @@
 <template>
-    <div class="flex justify-between py-5 px-4">
-        <div class="hidden md:flex" />
-        <div class="hidden md:flex items-center rounded-full border border-gray-400 overflow-clip">
+    <div class="flex justify-between mt-5">
+        <div class="hidden md:flex items-center rounded-full border  border-b-gray-400 border-r-gray-400 overflow-clip">
             <Button variant="ghost">Home</Button>
             <Button variant="ghost">Projects</Button>
             <Button variant="ghost">Shorts</Button>

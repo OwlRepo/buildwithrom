@@ -1,10 +1,70 @@
 <template>
     <div>
-
+        <section class="flex flex-col py-20">
+            <h2 class="mt-10 scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+                Hello!
+            </h2>
+            <h1 class="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl">
+                You can call me <span
+                    class="bg-gradient-to-r from-primary to-fuchsia-500 bg-clip-text text-transparent">Romeo</span>
+            </h1>
+            <p class="leading-7 mt-3">
+                Front-end Engineer at <a href="#"
+                    class="bg-gradient-to-r from-primary to-fuchsia-500 bg-clip-text text-transparent">
+                    Samsung
+                </a>
+            </p>
+            <p class="leading-7 my-7 md:w-[65%]">
+                I'm a UI engineer who crafts pixel-perfect interfaces using cutting-edge frameworks
+                with <strong>React and Vue ecosystem.</strong> Let's build something amazing together!
+            </p>
+            <div class="flex space-x-4">
+                <Button variant="outline">
+                    My Projects
+                </Button>
+                <Button variant="outline">Learn more about me</Button>
+            </div>
+            <div class="flex flex-row space-x-4 py-7">
+                <TooltipProvider>
+                    <Tooltip>
+                        <TooltipTrigger as-child>
+                            <Icon icon="radix-icons:file-text" role="button"
+                                class="h-[1.6rem] w-[1.6rem] rotate-0 scale-100 transition-all cursor-pointer" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                            <p>Resume</p>
+                        </TooltipContent>
+                    </Tooltip>
+                </TooltipProvider>
+                <TooltipProvider>
+                    <Tooltip>
+                        <TooltipTrigger as-child>
+                            <Icon icon="radix-icons:linkedin-logo" role="button"
+                                class="h-[1.6rem] w-[1.6rem] rotate-0 scale-100 transition-all cursor-pointer" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                            <p>LinkedIn</p>
+                        </TooltipContent>
+                    </Tooltip>
+                </TooltipProvider>
+                <TooltipProvider>
+                    <Tooltip>
+                        <TooltipTrigger as-child>
+                            <Icon icon="radix-icons:github-logo" role="button"
+                                class="h-[1.6rem] w-[1.6rem] rotate-0 scale-100 transition-all cursor-pointer" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                            <p>Github</p>
+                        </TooltipContent>
+                    </Tooltip>
+                </TooltipProvider>
+            </div>
+        </section>
     </div>
 </template>
 
 <script setup>
+import { Icon } from '@iconify/vue'
 definePageMeta({
     layout: 'default'
 })
