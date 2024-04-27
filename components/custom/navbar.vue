@@ -1,10 +1,9 @@
 <template>
     <div class="flex justify-between mt-5">
         <div class="hidden md:flex items-center rounded-full border  border-b-gray-400 border-r-gray-400 overflow-clip">
-            <Button variant="ghost">Home</Button>
-            <Button variant="ghost">Projects</Button>
-            <Button variant="ghost">Shorts</Button>
-            <Button variant="ghost">About</Button>
+            <Button variant="ghost" v-for="route in routes" :key="route.name" @click.prevent="goToRoute(route)">
+                {{ route.name }}
+            </Button>
         </div>
         <Drawer>
             <DrawerTrigger class="md:hidden">
@@ -20,10 +19,10 @@
                         <DrawerDescription>Explore my portfolio to know more</DrawerDescription>
                     </DrawerHeader>
                     <div class="grid grid-cols-2 gap-1.5 px-4 pb-4 text-center sm:text-left">
-                        <Button variant="outline">Home</Button>
-                        <Button variant="outline">Projects</Button>
-                        <Button variant="outline">Shorts</Button>
-                        <Button variant="outline">About</Button>
+                        <Button variant="ghost" v-for="route in routes" :key="route.name"
+                            @click.prevent="goToRoute(route)">
+                            {{ route.name }}
+                        </Button>
                     </div>
                 </div>
             </DrawerContent>
@@ -67,5 +66,28 @@ import {
 } from '@/components/ui/drawer'
 
 const colorMode = useColorMode()
+
+const routes = [
+    {
+        name: 'Home',
+        path: '/',
+    },
+    {
+        name: 'Projects',
+        path: '/projects',
+    },
+    {
+        name: 'Shorts',
+        path: '/shorts',
+    },
+    {
+        name: 'About',
+        path: '/about',
+    },
+]
+
+function goToRoute(route) {
+    navigateTo(route.path)
+}
 
 </script>

@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="flex items-center space-x-0 md:space-x-16">
+        <div class="h-52 w-3 rounded-full bg-gradient-to-b from-primary to-fuchsia-500 hidden md:block" />
         <section class="flex flex-col my-24 md:mt-36">
             <h2 class="mt-10 scroll-m-20 pb-2 text-5xl font-semibold tracking-tight transition-colors first:mt-0">
                 Hello!
@@ -58,51 +59,6 @@
                         </TooltipContent>
                     </Tooltip>
                 </TooltipProvider>
-            </div>
-        </section>
-        <section class="flex flex-col py-20">
-            <div class="flex items-center">
-                <div class="flex flex-col mt-5 items-center md:mx-auto overflow-clip">
-                    <h2
-                        class="scroll-m-20 text-xl font-semibold tracking-wide transition-colors first:mt-0 text-primary">
-                        Colleagues
-                    </h2>
-                    <h2 class="scroll-m-20 text-4xl font-semibold tracking-wide transition-colors first:mt-0">
-                        Thoughts about me
-                    </h2>
-                    <div class="flex p-1 space-x-5 mt-10 ">
-                        <Card v-for="(_, index) in 5">
-                            <CardContent class="flex space-x-10 p-6 w-[700px]">
-                                <div class="flex flex-col justify-center flex-[2] items-center">
-                                    <Avatar class="mb-3">
-                                        <AvatarImage src="https://github.com/radix-vue.png" alt="@radix-vue" />
-                                        <AvatarFallback>CN</AvatarFallback>
-                                    </Avatar>
-                                    <small>John Doe</small>
-                                    <small><b>Front End Engineer</b></small>
-                                </div>
-                                <div class="flex flex-col justify-center flex-[8]">
-                                    <i>
-                                        <small>
-                                            &ldquo;John is a talented front-end engineer with a keen eye for
-                                            detail and a
-                                            deep understanding of HTML, CSS, and JavaScript. He consistently
-                                            delivers high
-                                            quality work and is always eager to learn and improve. He is a
-                                            team
-                                            player,
-                                            communicates effectively, and is always open to feedback and
-                                            constructive
-                                            criticism. I highly recommend John for any front-end related
-                                            hiring
-                                            needs.&rdquo;
-                                        </small>
-                                    </i>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </div>
-                </div>
             </div>
         </section>
     </div>
