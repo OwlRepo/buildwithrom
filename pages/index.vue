@@ -1,6 +1,6 @@
 <template>
-    <div class="flex items-center space-x-0 md:space-x-16">
-        <div class="h-52 w-3 rounded-full bg-gradient-to-b from-primary to-fuchsia-500 hidden md:block" />
+    <div class="flex items-center space-x-0 md:space-x-16 relative">
+        <div class="h-52 w-3 rounded-full bg-gradient-to-b from-primary to-fuchsia-500 hidden md:block animate-pulse" />
         <section class="flex flex-col my-24 md:mt-36">
             <h2 class="mt-10 scroll-m-20 pb-2 text-5xl font-semibold tracking-tight transition-colors first:mt-0">
                 Hello!
@@ -61,6 +61,9 @@
                 </TooltipProvider>
             </div>
         </section>
+
+        <iframe src="https://lottie.host/embed/c8836945-1c31-415f-a14d-71a1bb23930a/9mUPyJ3PD7.json"
+            class="md:w-[1000px] md:h-[1000px] w-[500px] h-[500px] fixed -bottom-[200px] md:-bottom-0 md:-right-[500px]" />
     </div>
 </template>
 
