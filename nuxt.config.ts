@@ -16,4 +16,7 @@ export default defineNuxtConfig({
      */
     componentDir: "./components/ui",
   },
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
 });
