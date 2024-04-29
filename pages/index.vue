@@ -78,11 +78,59 @@
                 class="md:h-[500px] md:w-[800px] h-[300px] w-[300px]" />
         </div>
 
+        <div class="flex flex-col mt-36">
+            <div
+                class="h-[10px] w-20 rounded-full bg-gradient-to-b from-primary to-fuchsia-500 hidden md:block mb-5 mx-auto " />
+            <h1 class="scroll-m-20 w-fit text-5xl font-bold lg:text-4xl mx-auto">
+                Career Highlights
+            </h1>
+            <div class="grid auto-rows-[300px] grid-cols-3 gap-4 mt-10">
+                <Card v-for="(project, index) in notableProjects" :key="i"
+                    class="row-span-1 rounded-xl border-2 border-slate-400/10 bg-neutral-100 p-4 dark:bg-neutral-900"
+                    :class="{
+                        'col-span-2 ': index === 0,
+                    }">
+                    <b>{{ project.name }}</b>
+                    <p>{{ project.description }}</p>
+                    <strong>{{ project.role }}</strong>
+                </Card>
+            </div>
+        </div>
+
     </div>
 </template>
 
 <script setup>
 import { Icon } from '@iconify/vue'
+
+const notableProjects = [
+    {
+        name: 'My Portfolio',
+        description: 'This is my portfolio. I developed it using Nuxt 3, Tailwind, and Radix UI. I hope you like it.',
+        role: 'Frontend Engineer',
+    },
+    {
+        name: 'My Portfolio',
+        description: 'This is my portfolio. I developed it using Nuxt 3, Tailwind, and Radix UI. I hope you like it.',
+        role: 'Frontend Engineer',
+    },
+    {
+        name: 'My Portfolio',
+        description: 'This is my portfolio. I developed it using Nuxt 3, Tailwind, and Radix UI. I hope you like it.',
+        role: 'Frontend Engineer',
+    },
+    {
+        name: 'My Portfolio',
+        description: 'This is my portfolio. I developed it using Nuxt 3, Tailwind, and Radix UI. I hope you like it.',
+        role: 'Frontend Engineer',
+    },
+    {
+        name: 'My Portfolio',
+        description: 'This is my portfolio. I developed it using Nuxt 3, Tailwind, and Radix UI. I hope you like it.',
+        role: 'Frontend Engineer',
+    },
+]
+
 definePageMeta({
     layout: 'default'
 })
