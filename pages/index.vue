@@ -65,7 +65,7 @@
             class="h-[2rem] w-[2rem] p-[5px] rotate-0 scale-100 transition-all cursor-pointer animate-bounce border dark:border-white border-primary rounded-full mx-auto mt-10 mb-40" />
 
         <div
-            class="flex flex-col-reverse md:flex-row items-center w-full md:space-x-10 space-x-0 h-[200px] p-20 rounded-md overflow-y-clip mb-20 bg-gradient-to-br from-20% from-black to-fuchsia-500">
+            class="flex flex-col-reverse md:flex-row items-center w-full md:space-x-10 space-x-0 md:h-[200px] md:p-20 rounded-md md:overflow-y-clip mb-20 md:bg-gradient-to-br md:from-20% md:from-black md:to-fuchsia-500">
             <div class="flex flex-col">
                 <p class="bg-gradient-to-r from-primary to-fuchsia-500 bg-clip-text text-transparent w-fit text-lg">
                     Multi-Platform</p>
