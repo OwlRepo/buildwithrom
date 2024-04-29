@@ -60,21 +60,24 @@
                 </div>
             </section>
         </div>
-        <Icon icon="radix-icons:arrow-down" role="button"
-            class="h-[2rem] w-[2rem] p-[5px] rotate-0 scale-100 transition-all cursor-pointer animate-bounce border dark:border-white border-primary rounded-full mx-auto my-10" />
 
-        <div class="flex flex-col-reverse md:flex-row items-center w-full md:space-x-10 space-x-0">
-            <div class="flex flex-col my-24 md:mt-36 ">
+        <Icon icon="radix-icons:arrow-down" role="button"
+            class="h-[2rem] w-[2rem] p-[5px] rotate-0 scale-100 transition-all cursor-pointer animate-bounce border dark:border-white border-primary rounded-full mx-auto mt-10 mb-40" />
+
+        <div
+            class="flex flex-col-reverse md:flex-row items-center w-full md:space-x-10 space-x-0 h-[200px] p-20 rounded-md overflow-y-clip mb-20 bg-gradient-to-br from-20% from-black to-fuchsia-500">
+            <div class="flex flex-col">
                 <p class="bg-gradient-to-r from-primary to-fuchsia-500 bg-clip-text text-transparent w-fit text-lg">
                     Multi-Platform</p>
                 <b class="text-3xl">Reaching users on every screen</b>
-                <p class="leading-7 my-2 ">I have developed applications using modern frameworks to enhance
+                <p class="leading-7 mt-2">I have developed applications using modern frameworks to enhance
                     development speed and user experience across mobile, web, desktop, and embedded devices.
                 </p>
             </div>
             <iframe src="https://lottie.host/embed/1c0295e6-bf3e-4d16-9848-2e1fa6255490/iyTBGMvWLc.json"
-                class="md:h-[700px] md:w-[800px] h-[300px] w-[300px]" />
+                class="md:h-[500px] md:w-[800px] h-[300px] w-[300px]" />
         </div>
+
     </div>
 </template>
 
