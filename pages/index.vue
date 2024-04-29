@@ -9,15 +9,10 @@
                 You can call me <span
                     class="bg-gradient-to-r from-primary to-fuchsia-500 bg-clip-text text-transparent">Romeo</span>
             </h1>
-            <p class="leading-7 mt-3 text-xl">
-                Front-end Engineer at <a href="#"
-                    class="bg-gradient-to-r from-primary to-fuchsia-500 bg-clip-text text-transparent">
-                    Samsung
-                </a>
-            </p>
             <p class="leading-7 my-7 md:w-[65%]">
                 I'm a UI engineer who crafts pixel-perfect interfaces using cutting-edge frameworks
-                with <strong>React and Vue ecosystem.</strong> Let's build something amazing together!
+                with <strong class="bg-gradient-to-r from-primary to-fuchsia-500 bg-clip-text text-transparent">React
+                    and Vue ecosystem.</strong> Let's build something amazing together!
             </p>
             <div class="flex space-x-4">
                 <Button variant="outline">
@@ -61,9 +56,6 @@
                 </TooltipProvider>
             </div>
         </section>
-
-        <iframe src="https://lottie.host/embed/c8836945-1c31-415f-a14d-71a1bb23930a/9mUPyJ3PD7.json"
-            class="md:w-[1000px] md:h-[1000px] w-[500px] h-[500px] fixed -bottom-[200px] md:-bottom-0 md:-right-[500px]" />
     </div>
 </template>
 
