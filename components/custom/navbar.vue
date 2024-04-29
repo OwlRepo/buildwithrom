@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-between mt-5">
+    <div class="flex justify-between mt-8">
         <div class="hidden md:flex items-center rounded-full border  border-b-gray-400 border-r-gray-400 overflow-clip">
             <Button variant="ghost" v-for="route in routes" :key="route.name" @click.prevent="goToRoute(route)">
                 {{ route.name }}
