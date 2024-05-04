@@ -62,7 +62,7 @@
             <a href="https://app.daily.dev/romeoangelesjr">
                 <img 
                 src="https://api.daily.dev/devcards/v2/iGo5aeTE4EVvxH2gBN2Ae.png?type=default&r=t8q" 
-                
+                class="shadow-lg border border-gray-200 rounded-lg dark:border-none"
                 alt="Romeo Angeles JR's Dev Card"/>
             </a>
         </div>
