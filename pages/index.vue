@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="flex items-center space-x-0 md:space-x-16 mt-16">
+        <div class="flex flex-col md:flex-row items-center space-x-0 md:space-x-16 mt-16">
             <div
                 class="h-52 w-3 rounded-full bg-gradient-to-b from-primary to-fuchsia-500 hidden md:block animate-pulse" />
             <section class="flex flex-col my-24 md:mt-36">
@@ -59,6 +59,12 @@
                     </TooltipProvider>
                 </div>
             </section>
+            <a href="https://app.daily.dev/romeoangelesjr">
+                <img 
+                src="https://api.daily.dev/devcards/v2/iGo5aeTE4EVvxH2gBN2Ae.png?type=default&r=t8q" 
+                
+                alt="Romeo Angeles JR's Dev Card"/>
+            </a>
         </div>
 
         <Icon icon="radix-icons:arrow-down" role="button"
