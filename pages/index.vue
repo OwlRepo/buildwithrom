@@ -71,7 +71,7 @@
             class="h-[2rem] w-[2rem] p-[5px] rotate-0 scale-100 transition-all cursor-pointer animate-bounce border dark:border-white border-primary rounded-full mx-auto mt-10 mb-40" />
 
         <div
-            class="flex flex-col-reverse md:flex-row items-center w-full md:space-x-10 space-x-0 md:h-[200px] md:p-20 rounded-md md:overflow-y-clip mb-20 md:bg-gradient-to-br md:from-20% md:dark:from-black border border-gray-300 dark:border-none md:dark:to-fuchsia-500">
+            class="flex flex-col-reverse md:flex-row items-center w-full md:space-x-10 space-x-0 md:h-[200px] md:p-20 rounded-md md:overflow-y-clip mb-20 md:bg-gradient-to-br md:from-20% md:dark:from-black md:border md:border-gray-300 dark:border-none md:dark:to-fuchsia-500">
             <div class="flex flex-col">
                 <p class="bg-gradient-to-r from-primary to-fuchsia-500 bg-clip-text text-transparent w-fit text-lg">
                     Multi-Platform</p>
@@ -117,11 +117,25 @@
                     </div>
                     <Carousel class="relative w-full ">
                         <CarouselContent>
-                            <CarouselItem v-for="(_, index) in 5" :key="index">
+                            <CarouselItem v-for="(project, index) in projects.reverse()" :key="index">
                                 <div class="p-1">
                                     <Card>
-                                        <CardContent class="flex aspect-video items-center justify-center p-6">
-                                            <span class="text-4xl font-semibold">PROJECT {{ index + 1 }}</span>
+                                        <CardContent class="flex aspect-video p-6 relative flex-col md:flex-row">
+                                            <NuxtImg :src="project.banner" class="md:w-1/2 object-contain mb-5 md:mb-0"/>
+                                            <div class="flex flex-col md:p-5 justify-center">
+                                                <span class="text-2xl md:text-4xl font-semibold">{{project.title}}</span>
+                                                <small>{{ project.desc }}</small>
+                                                <hr class="my-5"/>
+                                                <small>Role</small>
+                                                <strong class="bg-gradient-to-r from-primary to-fuchsia-500 bg-clip-text text-transparent w-fit">{{ project.role }}</strong>
+                                                <br/>
+                                                <small class="mb-2">Technology Stack</small>
+                                                <div class="flex md:space-x-2 flex-wrap">
+                                                    <small v-for="stack in project.stack" :key="tech">
+                                                        <Badge class="text-white bg-fuchsia-500">{{ stack }}</Badge>
+                                                    </small>
+                                                </div>
+                                            </div>
                                         </CardContent>
                                     </Card>
                                 </div>
@@ -152,6 +166,126 @@ const workExperience = [
         tech: ['Nuxt 3', 'Tailwind', 'Radix UI'],
         date: '2023 - PRESENT',
     },
+]
+
+const projects = [
+    {
+        title: 'TALK(QUICKTALK)',
+        banner:
+            'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/quicktalk.png?alt=media&token=ef280e11-8ffe-4d92-96a7-513e886e14e0',
+        protected: true,
+        role: 'Mobile Developer',
+        stack:['Android Studio','XCode', 'Flutter','Java','SwiftUI','Dart'],
+        desc: "Formerly known as QuickTalk, it is an application that's focused on providing Real Time Communcations to connect brands, people and things anytime and anywhere.",
+    },
+    {
+        title: 'TALK ADMIN',
+        banner:
+            'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/no-banner.jpg?alt=media&token=9204eb44-8e68-48e2-9325-cd4f20d77213',
+        protected: true,
+        role: ['Web Developer', 'Product Designer', 'NextJS Developer'],
+        role: 'Lead Web Developer, Product Designer',
+        stack:['NextJS','ChakraUI','Javascript'],
+        desc: "A web application that's focused on managing the TALK Mobile Application.",
+    },
+    {
+        title: 'FIDOMONEY',
+        banner:
+            'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/fidomoney.png?alt=media&token=4d01353b-f2dd-45e5-969e-250865809793',
+        protected: true,
+        role: 'Lead Mobile Developer, Product Designer',
+        stack:['Flutter','Dart','Firestore'],
+        desc: 'Fidomoney is one of the only companies in the financial market that exclusively supplies digital payment solutions.',
+    },
+    {
+        title: 'MYNTHCHAIN',
+        banner:
+            'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/Screenshot_20230219_041450.png?alt=media&token=f2d1d558-71c7-4ac3-a3e2-42bfcc06aac1',
+        protected: true,
+        role: 'Lead Web Developer, Product Designer',
+        stack:['NextJS','ChakraUI','Javascript'],
+        desc: 'The world’s first hybrid digital marketplace for crypto collectables and non - fungible token (NFT)',
+    },
+    {
+        title: 'MYNTHDEX',
+        banner:
+            'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/dex.png?alt=media&token=a47c1657-8318-4dfb-b643-7132e7e65551',
+        protected: true,
+        role: 'Lead Web Developer, Product Designer',
+        stack:['NextJS','ChakraUI','Javascript'],
+        desc: 'A decentralized crypto exchanges that offer access to digital assets without an intermediary. Instead of relying on a company to fill and record crypto trades, MYNTHDEX offer peer-to-peer (P2P) token swaps using blockchain technology.',
+    },
+    {
+        title: 'MYNTHCHAIN ULTRAVERSE',
+        banner:
+            'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/ultraverse.png?alt=media&token=547c3067-ade2-497a-9c0e-9b14cc0f9757',
+        protected: true,
+        role: 'Lead Web Developer, Product Designer',
+        stack:['NextJS','ChakraUI','Javascript'],
+        desc: 'A decentralized infrastructure for the AR Ultraverse, merging the physical and virtual world through Augmented Reality, creating a new dimension where everything is possible.',
+    },
+    {
+        title: 'U-PRO PLUS',
+        banner:
+            'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/no-banner.jpg?alt=media&token=9204eb44-8e68-48e2-9325-cd4f20d77213',
+        protected: true,
+        role: 'Lead Mobile Developer, Product Designer',
+        stack:['Flutter','Dart'],
+        desc: 'A Cross Platform Mobile Application made for advertising purposes such as ADs management for Beauty Salons in Japan',
+    },
+    {
+        title: 'Digipay PH',
+        banner:
+            'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/digipay.png?alt=media&token=3ab4e9ee-7b0f-40fd-8e01-c1a813f28ebe',
+        protected: true,
+        role: 'Lead Web Developer',
+        stack:['ReactJS (Class Based Components)','SCSS','Javascript'],
+        desc: 'A digital payments and financial services platform with a mobile wallet, an industry leading biller ecosystem, and an interoperable backend.',
+    },
+    {
+        title: 'Digipay PH V2.0',
+        banner:
+            'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/digipay.png?alt=media&token=3ab4e9ee-7b0f-40fd-8e01-c1a813f28ebe',
+        protected: true,
+        role: 'Lead Web Developer',
+        stack:['NextJS','Bootstrap','Typescript'],
+        desc: 'Revamped and improved version of the Digipay PH that has a digital payments and financial services platform with a mobile wallet',
+    },
+    {
+        title: 'Back Office - Digipay PH',
+        banner:
+            'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/backoffice%20digipay.png?alt=media&token=9f3593bd-0ed8-4ff7-a183-de5782cac3c1',
+        protected: true,
+        role: 'Lead Web Developer, Product Designer',
+        stack:['Ruby On Rails','Ruby','SASS','JQuery','Javascript'],
+        desc: 'A web application for managing transactions and other related operations.',
+    },
+    {
+        title: 'Back Office - Digipay PH V2.0',
+        banner:
+            'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/backoffice%20digipay.png?alt=media&token=9f3593bd-0ed8-4ff7-a183-de5782cac3c1',
+        protected: true,
+        role: 'Lead Web Developer, Product Designer',
+        stack:['NextJS','ChakraUI','Typescript'],
+        desc: 'Revamped and improved version of the Digipay PH that focuses on managing transactions and other transaction related stuff that\'s being made on Digipay PH',
+    },
+    {
+        title: 'VIMDESK',
+        banner:
+            'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/vimdesk.png?alt=media&token=347c7f68-3d18-4c03-9b44-4ba2436e6865',
+        protected: true,
+        role: 'Lead Web Developer',
+        stack:['NuxtJS','VueJS','TailwindCSS','ViteJS','Javascript'],
+        desc: 'VimDesk is the operational console that gathers data and follows business activities extensively. With the ability to integrate and /or extract daily software tools such as ERP, MES, CRM, Finance, and more.',
+    },
+    //TODO: Add more projects
+    // 1. COTIT.IO Landing Page
+    // 2. VIATAG Admin Dashboard
+    // 3. VIMDESK Mobile Application
+    // 4. NEONLIFE Landing Page
+    // 5. NEONLIFE iOS
+    // 6. NEON AI Builder
+    // 7. THRIVE Android (In-device AI)
 ]
 
 definePageMeta({
