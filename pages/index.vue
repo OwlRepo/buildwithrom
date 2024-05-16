@@ -123,7 +123,9 @@
                                         <CardContent class="flex aspect-video p-6 relative flex-col md:flex-row">
                                             <NuxtImg :src="project.banner" class="md:w-1/2 object-contain mb-5 md:mb-0"/>
                                             <div class="flex flex-col md:p-5 justify-center">
-                                                <span class="text-2xl md:text-4xl font-semibold">{{project.title}}</span>
+                                                <span class="text-2xl md:text-4xl font-semibold" :class="{
+                                                    'hover:bg-gradient-to-r from-primary to-fuchsia-500 bg-clip-text hover:text-transparent': !project.protected 
+                                                }" :role="project.protected ? 'text' : 'button'" @click.prevent="!project.protected && windowOpen(project.redirectUrl)">{{project.title}}</span>
                                                 <small>{{ project.desc }}</small>
                                                 <hr class="my-5"/>
                                                 <small>Role</small>
@@ -131,7 +133,7 @@
                                                 <br/>
                                                 <small class="mb-2">Technology Stack</small>
                                                 <div class="flex md:space-x-2 flex-wrap">
-                                                    <small v-for="stack in project.stack" :key="tech">
+                                                    <small v-for="stack in project.stack" :key="stack">
                                                         <Badge class="text-white bg-fuchsia-500">{{ stack }}</Badge>
                                                     </small>
                                                 </div>
@@ -278,6 +280,16 @@ const projects = [
         stack:['NuxtJS','VueJS','TailwindCSS','ViteJS','Javascript'],
         desc: 'VimDesk is the operational console that gathers data and follows business activities extensively. With the ability to integrate and /or extract daily software tools such as ERP, MES, CRM, Finance, and more.',
     },
+    {
+        title: 'Denzel Escoto - Portfolio',
+        banner:
+            'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/Screenshot%202024-05-16%20at%2010.36.57%E2%80%AFPM.png?alt=media&token=d06863e0-4c75-40c4-a4f6-aec5c401acdf',
+        protected: false,
+        role: 'Lead Web Developer',
+        stack:['NuxtJS','VueJS','TailwindCSS','ViteJS','Typescript'],
+        redirectUrl:'https://denzelescoto.vercel.app/',
+        desc: `A user interface and user experience engineer's web portfolio for Denzel Escoto. A designer who craft a good experience for over 4 years of experience. Specializes in FIGMA.`,
+    },
     //TODO: Add more projects
     // 1. COTIT.IO Landing Page
     // 2. VIATAG Admin Dashboard
@@ -287,6 +299,10 @@ const projects = [
     // 6. NEON AI Builder
     // 7. THRIVE Android (In-device AI)
 ]
+
+function windowOpen(url) {
+    window.open(url,'_blank').focus()
+}
 
 definePageMeta({
     layout: 'default'
