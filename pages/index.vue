@@ -281,6 +281,16 @@ const projects = [
         desc: 'VimDesk is the operational console that gathers data and follows business activities extensively. With the ability to integrate and /or extract daily software tools such as ERP, MES, CRM, Finance, and more.',
     },
     {
+        title: 'COTIT.IO',
+        banner:
+            'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/COTIT-IO-SS.png?alt=media&token=3834ad7f-4a5d-4275-82c8-efd33d05e12b',
+        protected: false,
+        role: 'Lead Web Developer',
+        stack:['NuxtJS','VueJS','TailwindCSS','Javascript'],
+        redirectUrl:'https://cotit.io/',
+        desc: `A solution that offers 360 transparency and control of your business. Their supply chain provides real-time visibility and traceability, ensuring monitoring of goods' movement from origin to destination.`,
+    },
+    {
         title: 'Denzel Escoto - Portfolio',
         banner:
             'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/Screenshot%202024-05-16%20at%2010.36.57%E2%80%AFPM.png?alt=media&token=d06863e0-4c75-40c4-a4f6-aec5c401acdf',
